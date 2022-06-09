@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>kitech</title>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- tensorflow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+    <!-- icon -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/tablet.css" rel="stylesheet">
+    <link href="css/mobile.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="page">
+
+        <!-- sidebar -->
+        <ul class="sidemenu sidenavbar m-sidenav toggled" id="sidenav">
+
+            <!-- <br> -->
+            <!-- Sidebar - Brand -->
+            <a class="title align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <!-- <p>kitech</p> -->
+                    <img src="images/icon.svg" alt="kitech">
+                </div>
+            </a>
+            <!-- <br> -->
+
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" id="nav-link1" href="index.html">
+                    <!-- <i class="material-icons-outlined">query_stats</i> -->
+                    <img src="images/prediction.svg" alt="">
+                    <span class="nav-link-span" id="nav-link-span1">Prediction</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" id="nav-link2" href="search.html">
+                    <!-- <i class="material-icons-outlined">youtube_searched_for</i> -->
+                    <img src="images/recomendation.svg" alt="">
+                    <span class="nav-link-span" id="nav-link-span2">Recomendation</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+
+            <!-- Nav Item - Dashboard -->
+            <!-- <li class="nav-item">
+                <a class="nav-link" id="nav-link3" href="map.html">
+                    <i class="material-icons-outlined">location_on</i>
+                    <span class="nav-link-span" id="nav-link-span3">Map</span></a>
+            </li> -->
+
+            <!-- Divider -->
+            <!-- <hr class="sidenav-divider"> -->
+
+            <br>
+            <!-- Sidebar Toggler (Sidebar) -->
+            <!-- <div class="text-align-center display-inline">
+                <button class="sidebarToggle" id="sidebarToggle">
+                    <i class="material-icons-outlined toggle-icon" id="toggle-icon">arrow_forward_ios</i>
+                </button>
+            </div> -->
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content -->
+        <div class="display-flex" id="main">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav id="topnav">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="mobile_sidetoggle" class="m-side-toggle">
+                        <i class="material-icons-outlined">menu</i>
+                    </button>
+
+                    <!-- Topbar Search 
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form> -->
+
+                    <!-- Topnav bar content -->
+                    <ul class="menu">
+                        <span class="menu__title">MAIN</span>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="./index.html" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600">3DP</span>
+                            </a>
+                        </li>
+
+                        <!-- <div class="divider display-block"></div> -->
+
+                        <!-- Nav Item - User Information -->
+                        <!-- <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600">dropdown menu</span>
+                            </a>
+                        </li> -->
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div id="prediction">
+
+                    <!-- Page Heading -->
+                    <div class="page-header display-flex justify-content-center align-items-center">
+                        <h1 class="header-title"></h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <div class="cast_input">
+                            <div class="cast_box">
+                                <h2>GFD</h2>
+                                <div class="grid-gfd">
+                                    <div class="field">
+                                        <label for="GFD-12" class="field-label">GFD-12</label>
+                                        <input type="text" id="GFD-12" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD-20" class="field-label">GFD-20</label>
+                                        <input type="text" id="GFD-20" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD-30" class="field-label">GFD-30</label>
+                                        <input type="text" id="GFD-30" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD-40" class="field-label">GFD-40</label>
+                                        <input type="text" id="GFD-40" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD-50" class="field-label">GFD-50</label>
+                                        <input type="text" id="GFD-50" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD-70" class="field-label">GFD-70</label>
+                                        <input type="text" id="GFD-70" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD-100" class="field-label">GFD-100</label>
+                                        <input type="text" id="GFD-100" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD-140" class="field-label">GFD-140</label>
+                                        <input type="text" id="GFD-140" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD-200" class="field-label">GFD-200</label>
+                                        <input type="text" id="GFD-200" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="GFD-270" class="field-label">GFD-270</label>
+                                        <input type="text" id="GFD-270" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                    </div>
+                                    <div class="field">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cast_box">
+                                <h2>Other</h2>
+                                <div class="grid-oth">
+                                    <div class="field">
+                                        <label for="Pan" class="field-label">Pan</label>
+                                        <input type="text" id="Pan" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="Moisture" class="field-label">Moisture</label>
+                                        <input type="text" id="Moisture" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="MB" class="field-label">Percent M.B. Active Clay</label>
+                                        <input type="text" id="MB" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="AFS-c" class="field-label">AFS Clay Content</label>
+                                        <input type="text" id="AFS-c" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                        <label for="AFS-g" class="field-label">AFS Grain Fineness No.</label>
+                                        <input type="text" id="AFS-g" name="doge" class="field-input">
+                                    </div>
+                                    <div class="field">
+                                    </div>
+                                    <div class="field">
+                                    </div>
+                                    <div class="field">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cast_res">
+                            <h2 style="margin-bottom: 5rem;">Result</h2>
+                            <div class="card-cast-output">
+                                <div class="card-text01-output">Compactability (%)</div>
+                                <div class="card-text-cast-output" id="Compactability">&nbsp;</div>
+                            </div>
+                            <div class="card-cast-output">
+                                <div class="card-text01-output">Green Comp. Strength (N/sq cm)</div>
+                                <div class="card-text-cast-output" id="Green_Comp">&nbsp;</div>
+                            </div>
+                            <div class="card-cast-output">
+                                <div class="card-text01-output">Permeability No.</div>
+                                <div class="card-text-cast-output" id="Permeability_No">&nbsp;</div>
+                            </div>
+
+                            <div class="cast_btn">
+                                <button type="button" class="btn-input" id="Cast_btn">
+                                    <i class="material-icons-outlined">search</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <!-- <footer>
+                <div class="container">
+                    <div class="copyright text-align-center">
+                        <span>powered by Kitech</span>
+                    </div>
+                </div>
+            </footer> -->
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+
+</body>
+
+<!-- Page level plugins -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/cast.js"></script>
+<script type="module" src="js/tfjs.mjs"></script>
+
+</html>
