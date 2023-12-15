@@ -1,7 +1,6 @@
 {
-  "name": "3dp_web_v04",
+  "name": "molding",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +8,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tensorflow/tfjs": "^3.14.0"
-  }
+    "@tensorflow/tfjs": "^3.21.0",
+    "tensorflow.js": "^0.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
 }
