@@ -142,10 +142,11 @@
     font-family: inherit;
     cursor: pointer;
     width: 100%;
-    height: 100%;
+    height: 40px;
     color: white;
     background-color: #0067E2;
     border-color: #0067E2;
+    border-radius: 10px;
 }
 
 #prediction .card-col-chart {
@@ -510,6 +511,7 @@
 
 #table_data {
     width: 100%;
+    border-spacing: 0 10px;
 }
 
 .cast_input {
@@ -671,4 +673,86 @@
     color: red;
     display: block;
     margin-top: 8px;
+}
+
+#prediction .tabmenu {
+    padding-bottom: 5px;
+}
+
+#prediction .tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: 40px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: .8rem;
+}
+
+#prediction .tabs li {
+    background: #ffffff;
+    color: #222;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.05); */
+    align-items: center;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+}
+
+#prediction .tabs li:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#prediction .tabs li:nth-child(2) {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#prediction .tabs li.current {
+    background: #0067E2;
+    color: white;
+}
+
+
+/*progress bar*/
+.progress-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+.progress-bar {
+    width: 80%;
+    max-width: 600px;  /* Ensure the progress bar does not exceed 600px on larger screens */
+    height: 30px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0;
+    transition: width 0s;  /* Ensure the transition is short to avoid delays */
+}
+
+.progress-text {
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
 }
