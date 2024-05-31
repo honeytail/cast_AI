@@ -12,7 +12,7 @@
     <title>kitech</title>
 
     <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- tensorflow.js -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
@@ -132,7 +132,7 @@
 
                     <!-- Topnav bar content -->
                     <ul class="menu">
-                        <span class="menu__title">MAIN</span>
+                        <span class="menu__title"></span>
                         <li class="dropdown">
                             <span class="mr-2 d-none d-lg-inline text-gray-600">
 
@@ -186,11 +186,21 @@
                                     <label for="Compactability" class="field-label">Compactability</label>
                                     <input type="text" id="Compactability" name="doge" class="field-input" placeholder="42.8621 ~ 57.6053">
                                 </div>
+
                                 <div class="cast_btn">
+
+                                    <div class="tabmenu">
+                                        <ul class="tabs">
+                                            <li class="tab-link current" data-tab="Type_A">Model Type.A</li>
+                                            <li class="tab-link " data-tab="Type_B">Model Type.B</li>
+                                        </ul>
+                                    </div>
+
                                     <button type="button" class="btn-input" id="search_btn">
                                         <i class="material-icons-outlined">search</i>
                                     </button>
                                 </div>
+
                             </div>
                         </div>
 
@@ -274,6 +284,15 @@
                 </div>
             </div>
             <!-- End of Main Content -->
+
+            <div class="progress-overlay" id="progress_overlay">
+                <div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" id="progress_bar_fill"></div>
+                    </div>
+                    <div class="progress-text" id="progress_text">0%</div>
+                </div>
+            </div>
 
             <!-- Footer -->
             <!-- <footer>
