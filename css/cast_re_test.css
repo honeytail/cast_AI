@@ -10,7 +10,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 140px 140px;
+    grid-template-rows: 120px 120px;
 }
 
 .cast_re_res {
