@@ -1,5 +1,5 @@
-const BATCH_STRENGTH = await tf.loadLayersModel("model/tfjs_cs/model.json");
-const BATCH_COMPACT = await tf.loadLayersModel("model/tfjs_comp/model.json");
+const BATCH_STRENGTH = await tf.loadLayersModel("model/tfjs_cs_A/model.json");
+const BATCH_COMPACT = await tf.loadLayersModel("model/tfjs_comp_A/model.json");
 
 const Calc_btn = document.getElementById('Cast_btn');
 Calc_btn.addEventListener('click', function(e){
